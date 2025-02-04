@@ -71,12 +71,12 @@ const messages = [
         if (charIndex < messages[index].length) {
           terminal.innerHTML += messages[index].charAt(charIndex);
           charIndex++;
-          setTimeout(typeText, 100); // Typing speed (100ms per character)
+          setTimeout(typeText, 50); // Typing speed (100ms per character)
         } else {
           terminal.innerHTML += '\n';
           index++;
           charIndex = 0;
-          setTimeout(typeText, 1000); // Delay between messages (1 second)
+          setTimeout(typeText, 500); // Delay between messages (1 second)
         }
       } else {
         terminal.innerHTML += '\n<span class="blink">_</span>'; // Blinking cursor at the end
